@@ -1,4 +1,4 @@
-# Criptografia_RSA
+# Criptografia RSA
 É um sistema simples de criptografia do Algoritmo RSA Desenvolvido para fins de aprendizado e compreensão do conceito do algoritmo.  O sistema gera números primos grandes, chaves públicas e privada, encripta e decripta com as chaves.
 
 Sistema simples de criptografia do Algoritmo RSA
