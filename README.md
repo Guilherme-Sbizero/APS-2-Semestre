@@ -36,7 +36,6 @@ O RSA se mantém devido à dificuldade em fatorar um grande número (n) em núme
 ## 📦 Tecnologias Utilizadas
 
 - [Linguagem de Programação utilizada: **Python**]
-- [Bibliotecas e dependências]
 
 ## ⚙️ Instalação e Uso
 
@@ -64,7 +63,7 @@ O RSA se mantém devido à dificuldade em fatorar um grande número (n) em núme
     │   ├── [numeroPrimo.py]
         ├── [gerarChaves.py]
     ├── docs/
-    │   ├── [Documentação e diagramas]
+    │   ├── [Documentação]
     └── README.md
 
 ## 🔍 Como Contribuir
