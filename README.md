@@ -1,42 +1,89 @@
-# Criptografia RSA
-É um sistema simples de criptografia do Algoritmo RSA Desenvolvido para fins de aprendizado e compreensão do conceito do algoritmo.  O sistema gera números primos grandes, chaves públicas e privada, encripta e decripta com as chaves.
 
-Sistema simples de criptografia do Algoritmo RSA
-Desenvolvido para fins de aprendizado e compreensão do conceito do algoritmo.
+# APS - 2° Semestre
 
-O sistema gera números primos grandes, chaves públicas e privadas, encripta e decripta com as chaves.
-Funcionamento
-A RSA está fortemente ligada à Teoria dos Números, sendo baseado em pilares como as operações de resto e fatoração por números primos. O algoritmo pode ser resumido nos passos descritos abaixo:
+![Status do Projeto](https://img.shields.io/badge/status-%20desenvolvido-green)
 
-Obter dois números primos p e q; (Utilizei o teste Miller-Rabin. É um teste probabilístico para saber se um número n é primo de forma eficiente).
+Projeto desenvolvido para a disciplina de Introdução a Programação Estrutura **APS** (Atividade Prática Supervisionada) do 2° semestre do curso de Ciência da Computação na Universidade Paulista. Este projeto tem como objetivo desenvolver um sistema de criptografia.
 
-Calcular n = p*q;
+## 📝 Descrição
 
-Calcul phi(n) = (p-1)(q-1); (Função totiente de Euler)
+O projeto **APS-2-Semestre** visa apresentar os aspectos da criptografia RSA. Este projeto foi construído usando a linguagem
+de Programação python.
 
-Escolher mdc(phi(n), E) == 1, ou seja, E e phi(n) são coprimos (primos relativos);
+## 🚀 Funcionalidades
 
-Calcul D sendo d*e = 1 mod(phi(n)), ou seja, d seja o inverso multiplicativo de E em (mod phi(n)); (Algoritmo de Euclides estendido)
+O RSA está fortemente ligado à Teoria dos Números, sendo baseado em pilares como as operações de resto e fatoração por números primos. O algoritmo pode ser resumido nos passos descritos abaixo:
 
-Chave pública: (e, n); chave privada: (d, n);
+*	Obter dois números primos p e q; (Utilizei o teste Miller-Rabin. É um teste probabilístico para saber se  um número n é primo de maneira eficiente).
 
-Função para cifrar uma mensagem m: m^e = c mod(n);
+*	Calcular n = p*q;
 
-Função para decifrar uma mensagem c: c^d = m mod(n);
+*	Calcular phi(n) = (p-1)(q-1); (Função totiente de Euler)
 
-O RSA se mantém devido à dificuldade em fatorar um grande número (n) em números primos (p e q). Se b é o número de bits de n, então existem v(2b-1) possibilidades a ser testadas em um eventual pior caso, o que resulta em complexidade de tempo. A título de curiosidade, considerando b = 2048, v(2b) resulta em um número um pouco maior que 1,79,10308. Considerando uma supermáquina que consegue processar 1 bilhão (109) de tentativas por segundo, foram necessários mais de 5,10291 anos.
+*	Escolher mdc(phi(n), E) == 1, ou seja, E e phi(n) são coprimos (primos relativos);
 
-Mais informações:
-O Algoritmo de Criptografia RSA 1 de 2: Computando um exemplo
+*	 Calcular D sendo d*e = 1 mod(phi(n)), ou seja, d seja o inverso multiplicativo de E em (mod phi(n)); (Algoritmo de Euclides estendido)
 
-Criptografia RSA(canal Toda a Matemática)
+*	Chave pública: (e, n); chave privada: (d, n);
 
-RSA Criptografia Assimétrica e Assinatura Digital
+*	Função para cifrar uma mensagem m: m^e = c mod(n);
 
-https://medium.com/@prudywsh/how-to-generate-big-prime-numbers-miller-rabin-49e6e6af32fb
+*	Função para decifrar uma mensagem c: c^d = m mod(n);
 
-https://en.wikipedia.org/wiki/RSA_ (criptoistema)
+O RSA se mantém devido à dificuldade em fatorar um grande número (n) em números primos (p e q). Se b é o número de bits de n, então existem v(2b-1) possibilidades a serem testadas em um eventual pior caso, o que resulta em complexidade de tempo. A título de curiosidade, considerando b = 2048, v(2b) resulta em um número um pouco maior que 1,79.10308. Considerando uma supermáquina que consegue processar 1 bilhão (109) de tentativas por segundo, seriam necessários mais de 5.10291 anos.
 
-https://seer.imed.edu.br/index.php/revistasi/article/view/1639/1296
 
-https://www.lambda3.com.br/2012/12/entendendo-de-verdade-a-criptografia-rsa/
+## 📦 Tecnologias Utilizadas
+
+- [Linguagem de Programação utilizada: **Python**]
+- [Bibliotecas e dependências]
+
+## ⚙️ Instalação e Uso
+
+1. **Clone o repositório**:
+    ```bash
+    git clone https://github.com/Guilherme-Sbizero/APS-2-Semestre.git
+    ```
+
+2. **Navegue até o diretório do projeto**:
+    ```bash
+    cd APS-2-Semestre
+    ```
+
+3. **Execute o projeto**:
+    ```bash
+    Para executar o projeto basta abrir o projeto na sua IDE ou no seu Editor de Código e rodar o arquivo main.py exemplo vs code no Run Code (Cntrl + Alt + N)
+    ```
+
+## 📂 Estrutura do Projeto
+
+    APS-2-Semestre/
+    ├── src/
+    │   ├── [main.py]
+    │   ├── [criptografia.py]
+    │   ├── [numeroPrimo.py]
+        ├── [gerarChaves.py]
+    ├── docs/
+    │   ├── [Documentação e diagramas]
+    └── README.md
+
+## 🔍 Como Contribuir
+
+1. **Faça um fork do projeto**
+2. **Crie uma nova branch** para sua feature:
+    ```bash
+    git checkout -b feature/nome-da-feature
+    ```
+3. **Commit suas mudanças**:
+    ```bash
+    git commit -m "Adiciona nova feature: nome-da-feature"
+    ```
+4. **Push para a branch**:
+    ```bash
+    git push origin feature/nome-da-feature
+    ```
+5. **Abra um Pull Request**
+
+## 📄 Licença
+
+Esse projeto está sob a licença MIT License. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
